@@ -122,12 +122,7 @@ std::array<long, 5> search(int search_type, std::vector<int> first_line, std::ve
         {
           int needle_pos = linear_search(first_line, item, comparisonCount, loopCount);
         }
-        if (loud) {
-          std::cout << "\n";
-          std::cout << "num of comps linear: " << comparisonCount; 
-        }
         break;
-
       }
       // linear search
     case 1:
@@ -143,10 +138,6 @@ std::array<long, 5> search(int search_type, std::vector<int> first_line, std::ve
       {
         int needle_pos = op_linear_search(first_line, item, comparisonCount, loopCount);
       }
-      if (loud) {
-        std::cout << "num of comps optimized: " << comparisonCount;
-        std::cout << "\n";
-      }
 
       break;
     case 2:
@@ -161,10 +152,6 @@ std::array<long, 5> search(int search_type, std::vector<int> first_line, std::ve
       for (const auto &item : second_line)
       {
         int needle_pos = binary_search(first_line, first_line.size(), item, comparisonCount, loopCount);
-      }
-      if (loud) {
-        std::cout << "\n";
-        std::cout << "num of comps binary: " << comparisonCount;
       }
       break;
     default:

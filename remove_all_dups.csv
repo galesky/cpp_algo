@@ -98,5 +98,3 @@ name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,l
 "BM_vector_search/96",1,1.00216e+10,1.00152e+10,ns,,,,,,2.40892e+09,2.40792e+09,0,0,0
 "BM_vector_search/97",1,1.46932e+10,1.46711e+10,ns,,,,,,4.81584e+09,2.40792e+09,1.18033e+08,1e+06,5000
 "BM_vector_search/98",1,1.11626e+09,1.11576e+09,ns,,,,,,3.94495e+07,1.13644e+07,1.18033e+08,1e+06,5000
-"BM_vector_search_BigO",,7.29737e+08,7.28995e+08,(1),,,,,,,,,,
-"BM_vector_search_RMS",,2.94913,2.94868,,,,,,,,,,,
