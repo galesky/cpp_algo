@@ -111,19 +111,25 @@ std::array<long, 5> search(int search_type, std::vector<int> first_line, std::ve
   long sortCount = 0;
   long setLength = 0;
   long originalLength = 0;
+  std::set<int> s;
 
   switch(search_type) {
     case 0:
-      // linear search
-      for (const auto &item : second_line)
       {
-        int needle_pos = linear_search(first_line, item, comparisonCount, loopCount);
+        std::set<int> s( first_line.begin(), first_line.end() );
+        first_line.assign( s.begin(), s.end() );
+        for (const auto &item : second_line)
+        {
+          int needle_pos = linear_search(first_line, item, comparisonCount, loopCount);
+        }
+        if (loud) {
+          std::cout << "\n";
+          std::cout << "num of comps linear: " << comparisonCount; 
+        }
+        break;
+
       }
-      if (loud) {
-        std::cout << "\n";
-        std::cout << "num of comps linear: " << comparisonCount; 
-      }
-      break;
+      // linear search
     case 1:
       // optimized linear
       Quicksort(first_line,0,first_line.size()-1, sortCount);
