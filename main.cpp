@@ -116,6 +116,7 @@ std::array<long, 5> search(int search_type, std::vector<int> first_line, std::ve
   switch(search_type) {
     case 0:
       {
+	// https://stackoverflow.com/questions/1041620/whats-the-most-efficient-way-to-erase-duplicates-and-sort-a-vector
         std::set<int> s( first_line.begin(), first_line.end() );
         first_line.assign( s.begin(), s.end() );
         for (const auto &item : second_line)
@@ -143,7 +144,8 @@ std::array<long, 5> search(int search_type, std::vector<int> first_line, std::ve
     case 2:
       // binary
       Quicksort(first_line,0,first_line.size()-1, sortCount);
-            // removing duplicates is O(n)
+      // removing duplicates is O(n)
+      // https://stackoverflow.com/questions/1041620/whats-the-most-efficient-way-to-erase-duplicates-and-sort-a-vector
       originalLength = (long long) first_line.size();
       first_line.erase( unique( first_line.begin(), first_line.end() ), first_line.end() );
       setLength = (long long) first_line.size();
