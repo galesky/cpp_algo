@@ -117,6 +117,7 @@ std::array<long, 5> search(int search_type, std::vector<int> first_line, std::ve
     case 0:
       {
 	// https://stackoverflow.com/questions/1041620/whats-the-most-efficient-way-to-erase-duplicates-and-sort-a-vector
+	// should've used 'unordered_set' as it is O(n) and does not sort
         std::set<int> s( first_line.begin(), first_line.end() );
         first_line.assign( s.begin(), s.end() );
         for (const auto &item : second_line)
